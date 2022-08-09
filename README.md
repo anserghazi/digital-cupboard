@@ -1,10 +1,8 @@
-<img src="assets/foodies-readme.png" align="center" width="512" />
-
 # [Digital Cupboard](https://digitalcupboard.ca/)
 
 ## Motivation
 
-Do you enjoy following recipes from YouTube cooking channels? Are you frustrated with videos that don't include a link to the recipe/ingredients in the description? Are you tired of scrubbing through videos and jotting down ingredients and heading all the way down to the grocery store, just to find out half your items aren't even in stock? <sup>I just wanted to make a sandwich..</sup> Well, scrub no further!
+Do you enjoy following recipes from YouTube cooking channels? Are you frustrated with videos that don't include a link to the recipe/ingredients in the description? Are you tired of scrubbing through videos and jotting down ingredients and heading all the way down to the grocery store, just to find out half your items aren't even in stock?? <sup>I just wanted to make a sandwich..</sup> Well, scrub no further!
 
 ## What it is
 
