@@ -35,14 +35,45 @@ export class IngredientService {
   async validateIngredients(nounList: string[]): Promise<any> {
     const ingredientList = Promise.all(
       nounList.map(async (noun) => {
-        const ingredient = await this.ingredientRepository.findOne({
-          where: [
-            { foodDescription: ILike(`% ${noun} %`) },
-            { ingredientDescription: ILike(`% ${noun}%`) },
-          ],
-        });
-        if (typeof ingredient != 'undefined' && ingredient) {
-          return noun;
+        const ingredientWords = noun.split(' ');
+        if (ingredientWords.length == 1) {
+          const ingredient = await this.ingredientRepository.findOne({
+            where: [
+              { foodDescription: ILike(`% ${noun} %`) },
+              { ingredientDescription: ILike(`% ${noun}%`) },
+            ],
+          });
+          if (typeof ingredient != 'undefined' && ingredient) {
+            return noun;
+          }
+        } else if (ingredientWords.length == 2) {
+          const ingredient = await this.ingredientRepository.findOne({
+            where: [
+              {
+                foodDescription: ILike(
+                  `% ${ingredientWords[0]}% ${ingredientWords[1]}%`,
+                ),
+              },
+              {
+                foodDescription: ILike(
+                  `% ${ingredientWords[1]}% ${ingredientWords[0]}%`,
+                ),
+              },
+              {
+                ingredientDescription: ILike(
+                  `%${ingredientWords[0]}% ${ingredientWords[1]}%`,
+                ),
+              },
+              {
+                ingredientDescription: ILike(
+                  `%${ingredientWords[1]}% ${ingredientWords[0]}%`,
+                ),
+              },
+            ],
+          });
+          if (typeof ingredient != 'undefined' && ingredient) {
+            return noun;
+          }
         }
       }),
     );
