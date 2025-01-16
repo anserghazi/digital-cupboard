@@ -1,4 +1,4 @@
-# [Digital Cupboard](https://digitalcupboard.ca/)
+# [Digital Cupboard](https://digitalcupboard.ca/) (WIP)
 
 If you enjoy watching cooking videos on YouTube, you've probably encountered a video without an ingredient list or recipe in the description/comments. I'm sure those recipes would be fun to try, but I shouldn't have to rewatch the entire thing to jot the ingredients down! I want my ingredients *now*. :triumph:
 
